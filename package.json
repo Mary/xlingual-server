@@ -1,5 +1,5 @@
 {
-  "name": "thinkful-backend-template",
+  "name": "Cheesehub Server",
   "version": "1.0.0",
   "description": "Template for an Express backend",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "heroku": "node index.js",
     "travis": "npm run mocha"
   },
-  "author": "Joe Turner <jturner@thinkful.com>",
+  "author": "mkcnly",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.4",
