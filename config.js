@@ -13,4 +13,3 @@
   // TEST_DATABASE_URL:
   //     process.env.TEST_DATABASE_URL ||
   //     'postgres://localhost/thinkful-backend-test'
-//mongodb://xdev:xdev321@ds255403.mlab.com:55403/xlingual'

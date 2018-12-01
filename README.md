@@ -1,8 +1,9 @@
-###xlingual server-side code
+### xlingual server-side code
+* 11/30/2018
 
-##Not for the faint of heart
+## Not for the faint of heart
 
-##Herein lies:
+## Herein lies:
 * a wonderous index.js file that contains mysterious routes
 * routes themselves that communicate to the mothership (mongo)
 * Great fun for all ages!
