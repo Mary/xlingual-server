@@ -1,7 +1,13 @@
-'use strict';
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const mongoose = require('mongoose');
+const express = require('express');
+const sinon = require('sinon');
+// const jwt = require('jsonwebtoken');
+
+const app = require('../index');
+const Word = require('../models/wordModel.js');
 
 const {TEST_DATABASE_URL} = require('../config');
 const {dbConnect, dbDisconnect} = require('../db-mongoose');
@@ -30,3 +36,4 @@ describe('Mocha and Chai', function() {
     expect(true).to.be.true;
   });
 });
+

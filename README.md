@@ -1,33 +1,9 @@
-###REMINDERS:
+###xlingual server-side code
 
+##Not for the faint of heart
 
+##Herein lies:
+* a wonderous index.js file that contains mysterious routes
+* routes themselves that communicate to the mothership (mongo)
+* Great fun for all ages!
 
-### Working on the project
-
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm start`
-    * Starts a server running at http://localhost:8080
-    * Automatically restarts when any of your files change
-
-## Databases
-
-By default, the template is configured to connect to a MongoDB database using Mongoose.  It can be changed to connect to a PostgreSQL database using Knex by replacing any imports of `db-mongoose.js` with imports of `db-knex.js`, and uncommenting the Postgres `DATABASE_URL` lines in `config.js`.
-
-## Deployment
-
-Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-command-line).
-
-### Setting up the project on Heroku
-
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Create the Heroku app: `heroku create PROJECT_NAME`
-
-* If your backend connects to a database, you need to configure the database URL:
-    * For a MongoDB database: `heroku config:set DATABASE_URL=mongodb://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
-    * For a PostgreSQL database: `heroku config:set DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
-
-* If you are creating a full-stack app, you need to configure the client origin: `heroku config:set CLIENT_ORIGIN=https://www.YOUR_DEPLOYED_CLIENT.com`
-
-### Deploying to Heroku
-
-* Push your code to Heroku: `git push heroku master`

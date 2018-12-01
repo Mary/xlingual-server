@@ -3,10 +3,15 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const passport = require('passport');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-// const {dbConnect} = require('./db-knex');
+
+const usersRouter = require('./routes/users');
+const wordsRouter = require('./routes/words');
+const authRouter = require('./routes/auth');
+const { localStrategy, jwtStrategy } = require('./strategies.js')
 
 const app = express();
 
@@ -21,6 +26,23 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+app.use('/users', usersRouter);
+app.use('/words', wordsRouter);
+app.use('/auth', authRouter);
+
+app.use((err, req, res, next) => {
+  if (err.status) {
+    const errBody = Object.assign({}, err, { message: err.message });
+    res.status(err.status).json(errBody);
+  } else {
+    console.log(err)
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
 
 function runServer(port = PORT) {
   const server = app
